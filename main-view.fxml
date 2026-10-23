@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sysproduto.controller.MainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="654.0" prefWidth="1061.0" spacing="15.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="624.0" prefWidth="550.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="345.0" text="Cadastro de Produto e Categoria">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <GridPane hgap="10.0" prefHeight="286.0" prefWidth="529.0" vgap="8.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nome do Produto:" GridPane.rowIndex="1" />
+                        <Label text="Descrição do Produto:" GridPane.rowIndex="2" />
+                        <Label text="Data de Fabricação:" GridPane.rowIndex="3" />
+                        <Label text="Data de Validade:" GridPane.rowIndex="4" />
+                        <Label text="Preço de Compra:" GridPane.rowIndex="5" />
+                        <Label text="Quatd em estoque:" GridPane.rowIndex="7" />
+                        <Label text="Id Categoria:" GridPane.rowIndex="8" />
+                        <Label text="Nome Categoria:" GridPane.rowIndex="9" />
+                        <Label text="Descrição Categoria:" GridPane.rowIndex="10" />
+                        <Label text="Setor Categoria:" GridPane.rowIndex="11" />
+                        <DatePicker fx:id="dpDataFabricacao" prefHeight="26.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="dpDataValidade" prefHeight="26.0" prefWidth="266.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtDescricao" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtPrecoCompra" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtQuantidadeEstoque" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="txtIdCategoria" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="txtNomeCategoria" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <TextField fx:id="txtDescricaoCategoria" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextField fx:id="txtSetorCategoria" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                        <Label text="Código:" />
+                        <TextField fx:id="txtCodigo" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtPrecoVenda" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Preço de Venda:" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <HBox alignment="TOP_CENTER" prefHeight="106.0" prefWidth="490.0" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onCadastrarClick" prefHeight="26.0" prefWidth="180.0" text="Cadastrar">
+                           <HBox.margin>
+                              <Insets top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onConsultarClick" prefHeight="26.0" prefWidth="180.0" text="Consultar">
+                           <HBox.margin>
+                              <Insets top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="40.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefWidth="459.0" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onExcluirClick" prefHeight="26.0" prefWidth="180.0" text="Excluir">
+                           <HBox.margin>
+                              <Insets top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onLimparClick" prefHeight="26.0" prefWidth="180.0" text="Limpar">
+                           <HBox.margin>
+                              <Insets top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="40.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="624.0" prefWidth="526.0" spacing="10.0">
+               <children>
+                  <Label text="Produtos Cadastrados">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tabelaProdutos" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="colCodigo" minWidth="0.0" prefWidth="84.0" text="Código" />
+                        <TableColumn fx:id="colNome" prefWidth="84.0" text="Nome" />
+                        <TableColumn fx:id="colCategoria" prefWidth="84.0" text="Categoria" />
+                        <TableColumn fx:id="colSetor" prefWidth="84.0" text="Setor" />
+                        <TableColumn fx:id="colPrecoVenda" prefWidth="84.0" text="Venda" />
+                      <TableColumn fx:id="colEstoque" prefWidth="84.0" text="Estoque" />
+                      <TableColumn fx:id="colValidade" prefWidth="84.0" text="Validade" />
+                    </columns>
+                  </TableView>
+                  <Label text="Relatórios (Stream API)">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="187.0" prefWidth="506.0">
+                     <children>
+                        <VBox prefHeight="138.0" prefWidth="287.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onRelatorioEstoqueBaixoClick" prefHeight="26.0" prefWidth="180.0" text="Estoque baixo (menor que 10)">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#onRelatorioVencimentoClick" prefHeight="26.0" prefWidth="180.0" text="Vencimento (60 dias)">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="138.0" prefWidth="278.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onRelatorioAgrupadoSetorClick" prefHeight="26.0" prefWidth="180.0" text="Agrupar por setor">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#onRelatorioMargemCategoriaClick" prefHeight="26.0" prefWidth="180.0" text="Margem por Categoria">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="40.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="202.0" prefWidth="506.0">
+                     <children>
+                        <TextArea fx:id="txtAreaRelatorio" prefHeight="153.0" prefWidth="548.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
