@@ -8,7 +8,7 @@ Sistema desenvolvido em Java com interface gráfica **JavaFX** para gerenciar o 
 
 ---
 
-## 🚀 Como Executar o Programa
+##  Como Executar o Programa
 
 1. **Pré-requisitos:** Ter o **Java JDK 17**  e a IDE **IntelliJ IDEA** instalados no computador.
 2. **Abrir o Projeto:**
@@ -21,7 +21,7 @@ Sistema desenvolvido em Java com interface gráfica **JavaFX** para gerenciar o 
 
 ---
 
-## 📝 Relatório: Funcionalidades Implementadas e Decisões de Design
+##  Relatório: Funcionalidades Implementadas e Decisões de Design
 
 ### 1. Funcionalidades Implementadas
 * **Operações Básicas (CRUD Completo):**
